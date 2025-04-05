@@ -3,11 +3,11 @@
     --light-primary-color: #6c5ce7;
     --light-secondary-color: #483d8b;
     --light-accent-color: #a29bfe;
-    --light-dark-color: #f8f9fa;
-    --light-darker-color: #eaeaea;
-    --light-light-color: #ffffff;
-    --light-text-color: #212529;
-    --light-text-secondary: #495057;
+    --light-dark-color: #f0f7f0;  /* Light green background */
+    --light-darker-color: #e2f0e2; /* Slightly darker green */
+    --light-light-color: #f8fff8; /* Very light green */
+    --light-text-color: #1a291a;  /* Dark green text for contrast */
+    --light-text-secondary: #2a3f2a; /* Secondary text color with good contrast */
     --light-gray-color: #6c757d;
     --light-light-gray: #e9ecef;
     --light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@ body.light-theme #particles-js {
 
 /* Navigation */
 body.light-theme .navbar {
-    background-color: rgba(248, 249, 250, 0.95) !important;
+    background-color: rgba(240, 247, 240, 0.95) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -49,6 +49,7 @@ body.light-theme .logo {
 
 body.light-theme .nav-links a {
     color: var(--light-text-color) !important;
+    font-weight: 600 !important;
 }
 
 body.light-theme .bar {
@@ -227,4 +228,69 @@ input:checked + .slider:before {
 .theme-icon {
     margin-left: 10px;
     color: var(--accent-color);
+}
+
+/* Update hero section background for light theme */
+body.light-theme .hero-bg-img {
+    opacity: 0.8 !important;
+}
+
+/* Fix text contrast in hero section for light theme */
+body.light-theme .hero-content {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    color: #1a291a !important;
+    text-shadow: none !important;
+}
+
+body.light-theme .hero-content h1,
+body.light-theme .hero-content p,
+body.light-theme .hero-content .text-scramble {
+    color: #1a291a !important;
+    text-shadow: none !important;
+}
+
+/* Fix the background overlay in light theme */
+body.light-theme #hero > div:first-child {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Add work experience timeline styles for light theme */
+body.light-theme .experience-section {
+    background-color: var(--light-dark-color) !important;
+}
+
+body.light-theme .timeline::before {
+    background-color: var(--light-primary-color) !important;
+}
+
+body.light-theme .timeline-dot {
+    background-color: var(--light-primary-color) !important;
+}
+
+body.light-theme .timeline-content {
+    background-color: var(--light-light-color) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-theme .timeline-title h3 {
+    color: var(--light-text-color) !important;
+}
+
+body.light-theme .timeline-title .company {
+    color: var(--light-primary-color) !important;
+}
+
+body.light-theme .timeline-date, 
+body.light-theme .timeline-location {
+    color: var(--light-text-secondary) !important;
+}
+
+body.light-theme .company-link a {
+    color: var(--light-primary-color) !important;
+}
+
+/* Add university logo styling for light theme */
+body.light-theme .university-logo img {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 } 
