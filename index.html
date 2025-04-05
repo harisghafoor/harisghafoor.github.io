@@ -1,247 +1,410 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Personal Portfolio</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Haris Ghafoor - Computational Science Researcher</title>
+	<link rel="stylesheet" href="assets/css/modern.css">
+	<link rel="stylesheet" href="assets/css/dark-theme.css">
+	<link rel="stylesheet" href="assets/css/light-theme.css">
+	<!-- Animation Libraries -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<!-- Emergency preloader fix -->
+	<script>
+		window.addEventListener('DOMContentLoaded', function() {
+			// Force preloader to disappear after 5 seconds
+			setTimeout(function() {
+				var preloader = document.querySelector('.preloader');
+				if (preloader) {
+					preloader.style.opacity = '0';
+					setTimeout(function() {
+						preloader.style.display = 'none';
+					}, 500);
+				}
+			}, 5000);
+
+			// Check for saved theme preference and apply it
+			const currentTheme = localStorage.getItem('theme') || 'dark-theme';
+			document.body.classList.add(currentTheme);
+			
+			if (currentTheme === 'light-theme') {
+				document.getElementById('checkbox').checked = true;
+				document.querySelector('.theme-icon i').classList.replace('fa-moon', 'fa-sun');
+			}
+		});
+	</script>
 </head>
-
-<body class="is-preload">
-
-	<!-- pper -->
-	<div id="wrapper" class="fade-in">
-
-		<!-- Intro -->
-		<div id="intro">
-			<h1>Haris Ghafoor<br />
-			</h1>
-			<p>AI Developer with Extensive Experience in Predictive Analytics and Machine Learning</p>
-				<!-- a href="Add Link : How"></a>.</p> -->
-			<ul class="actions">
-				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-			</ul>
+<body class="dark-theme">
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
 		</div>
+	</div>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="logo">Home</a>
-		</header>
+	<!-- Particles Background -->
+	<div id="particles-js"></div>
+	
+	<!-- Rain Container -->
+	<div class="rain-container"></div>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li class="active"><a href="index.html">Research Projects</a></li>
-				<li><a href="articles.html">Articles</a></li>
-				<li><a href="mycv.html">About me</a></li>
-				<!-- <li><a href="elements.html">Academic Projects</a></li> -->
+	<!-- Navigation -->
+	<nav class="navbar">
+		<div class="container">
+			<a href="#" class="logo">Haris Ghafoor</a>
+			<ul class="nav-links">
+				<li><a href="#hero" class="active">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#research">Research</a></li>
+				<li><a href="#publications">Publications</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
+			<div class="theme-switch-wrapper">
+				<label class="theme-switch" for="checkbox">
+					<input type="checkbox" id="checkbox" />
+					<div class="slider round"></div>
+				</label>
+				<span class="theme-icon"><i class="fas fa-moon"></i></span>
+			</div>
+			<div class="menu-icon">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+	</nav>
 
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/haris-ghafoor-804146180/" target="_blank"
-						class="icon brands fa-linkedin"> <span class="label">Twitter</span></a></li>
-				<li><a href="https://github.com/harisghafoor" target="_blank" class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<!-- <span class="date">April 25, 2017</span> -->
-					<h2><a href="#"
-							onclick="window.open('https://github.com/harisghafoor/TS_forcasting/tree/main', '_blank');">Electricity
-							Demand Forecasting using LSTM Encoded NBEATS Model</a></h2>
-					<p>Development of a Network of Stacked Blocks of MLP in which each block is encoded by Recurrent
-						Layer i.e. LSTM in order to accurately capture the different kinds of trends & seasonality in
-						Time Series.</p>
-				</header>
-				<a href="#" class="image main"><img src="images/nbeats.png" alt="" /></a>
-				<ul class="actions special">
-					<li><a href="https://github.com/harisghafoor/TS_forcasting/tree/main" class="button"
-							target="_blank">CODE</a></li>
-				</ul>
-			</article>
-
-			<!-- Posts -->
-			<section class="posts">
-				<article>
-					<header>
-						<h2><a href="#"
-								onclick="window.location.href='#'; window.open('https://github.com/harisghafoor/Decentralized-Machine-Learning-', '_blank');">Decentralized
-								Machine Learning<br /></a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/dml.jpeg" alt="" /></a>
-					<p>Research & Development of a decentralized machine learning infrastructure that utilizes on-device
-						machine learning, blockchain, and federated learning technologies to unlock the potential of
-						unused data and idle processing power for machine learning tasks.
-					</p>
-					<ul class="actions special">
-						<li><a href="#" class="button"
-								onclick="window.open('https://github.com/harisghafoor/Decentralized-Machine-Learning-', '_blank');">Code</a>
-						</li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#"
-								onclick="window.location.href='#'; window.open('https://github.com/harisghafoor/time_series_forecasting', '_blank');">Time
-								Series Forecasting<br />using Classical and Deep Learning Models</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/forecasting.jpg" alt="" /></a>
-					<p>Explored classical and modern time series forecasting models, including ARIMA, SARIMA, linear
-						regression, and deep learning models such as RNNs, N-BEATS, and transformer-based models.
-						Global models such as NBEATS, RNN, etc outperform statistical methods due to their ability to
-						provide robust forecasts.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button"
-								onclick="window.open('https://github.com/harisghafoor/time_series_forecasting', '_blank');">Code</a>
-						</li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#"
-								onclick="window.location.href='#'; window.open('https://github.com/harisghafoor/Estimation-of-Probability-of-Accidents-Based-on-Driver-Habits', '_blank');">Algorithm
-								Development for Driver Report Card<br />and Accident Probability Assessment using
-								Bayesian Statistics</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/baesian.jpg" alt="" /></a>
-					<p>Developed an algorithm for assessing driver behavior and predicting accident probability in a
-						Driver Behavior Assessment project using Applied Bayesian statistical methods.
-						Developed a driver report card system that provided an overall score based on various driving
-						behaviors and characteristics.
-					</p>
-					<ul class="actions special">
-						<li><a href="#" class="button"
-								onclick="window.open('https://github.com/harisghafoor/Estimation-of-Probability-of-Accidents-Based-on-Driver-Habits', '_blank');">Code</a>
-						</li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#"
-								onclick="window.location.href='#'; window.open('https://github.com/harisghafoor/Customer_Churn', '_blank');">Customer
-								Churn Prediction and Analysis Using Machine Learning</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/Churn.png" alt="" /></a>
-					<p>Utilized Machine Learning models to predict customer churn and retention for a Telecom company,
-						analyzing the results to optimize marketing and strategy policies.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button"
-								onclick="window.open('https://github.com/harisghafoor/Customer_Churn', '_blank');">Code</a>
-						</li>
-						<!-- <li><a href="https://github.com/your_username/customer_churn_prediction" class="button"
-								target="_blank">CODE</a></li> -->
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#"
-								onclick="window.location.href='#'; window.open('https://github.com/your_username/news_classification', '_blank');">News
-								Classification using NLP Techniques and Machine Learning Models</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/NLP.png" alt="" /></a>
-					<p>Explored Kaggle Competition to gain an understanding of Natural Language Processing. Faced
-						challenges about getting good results due to the imbalanced nature of datasets.</p>
-					<ul class="actions special">
-						</li>
-						<li><a href="https://github.com/your_username/news_classification" class="button"
-								target="_blank">CODE</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#"
-								onclick="window.location.href='#'; window.open('https://github.com/harisghafoor/piano_note_extraction', '_blank');">Piano
-								Note Extraction using Digital Signal Processing</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/piano.jpg" alt="" /></a>
-					<p>Utilized various digital signal processing techniques, such as filtering, thresholding, and
-						Fourier analysis, to extract the fundamental frequency and harmonics of each note played on the
-						piano.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button"
-								onclick="window.open('https://github.com/harisghafoor/piano_note_extraction', '_blank');">Code</a>
-						</li>
-					</ul>
-				</article>
-			</section>
-
-
-			<!-- Footer -->
-			<footer>
-				<div class="pagination">
-					<!--<a href="#" class="previous">Prev</a>-->
-					<!-- <a href="#" class="page active">1</a>
-					<a href="#" class="page">2</a>
-					<a href="#" class="page">3</a>
-					<span class="extra">&hellip;</span>
-					<a href="#" class="page">8</a>
-					<a href="#" class="page">9</a>
-					<a href="#" class="page">10</a>
-					<a href="#" class="next">Next</a> -->
+	<!-- Hero Section -->
+	<section id="hero" class="hero-section">
+		<div class="hero-bg"></div>
+		<div class="container">
+			<div class="hero-content">
+				<h1 class="text-glitch" data-aos="fade-up">Haris Ghafoor</h1>
+				<div class="text-scramble-container" data-aos="fade-up" data-aos-delay="100">
+					<span class="text-scramble"></span>
 				</div>
-			</footer>
-
+				<p data-aos="fade-up" data-aos-delay="200">MS-PhD in Computational Science and Engineering at Yonsei University, Korea</p>
+				<div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+					<a href="#research" class="btn btn-primary shiny-btn">My Research</a>
+					<a href="#contact" class="btn btn-outline electric-border">Contact Me</a>
+				</div>
+			</div>
 		</div>
+		<div class="scroll-down" data-aos="fade-up" data-aos-delay="400">
+			<span class="mouse">
+				<span class="wheel"></span>
+			</span>
+			<div class="arrows">
+				<span class="arrow-down"></span>
+				<span class="arrow-down"></span>
+			</div>
+		</div>
+	</section>
 
-		<!-- Footer -->
-		<footer id="footer">
-			</section>
-			<section class="split contact">
-				<section class="alt">
-					<h3>Address</h3>
-					<p>Taxila, Wah Cantt, 47080<br />
-						Pakistan</p>
-				</section>
-				<section>
-					<h3>Email</h3>
-					<p><a href="#">harisghafoor2000@gmail.com</a></p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						<li><a href="https://www.linkedin.com/in/haris-ghafoor-804146180/" target="_blank"
-								class="icon brands fa-linkedin"> <span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/harisghafoor" target="_blank"
-								class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+	<!-- About Section -->
+	<section id="about" class="about-section">
+		<div class="container">
+			<div class="section-title" data-aos="fade-up">
+				<h2 class="animated-underline">About Me</h2>
+			</div>
+			<div class="about-content">
+				<div class="about-img gradient-border" data-aos="fade-right">
+					<!-- Use a placeholder image until you can add your own -->
+					<img src="images/profile_pic.jpg" alt="Haris Ghafoor">
+					<!-- For production: <img src="images/profile_pic.jpg" alt="Haris Ghafoor"> -->
+				</div>
+				<div class="about-text" data-aos="fade-left">
+					<h3>Computational Science Researcher</h3>
+					<p>I am a <span class="neon-text">Computational Science and Engineering</span> researcher focused on inverse learning problem modeling, ultrasound synthesis methods, and computational methods for medical imaging.</p>
+					<p>With a background in Electrical Engineering and expertise in Digital Signal Processing and Machine Learning, I bring a multidisciplinary approach to solving complex computational problems in medical imaging and diagnostics.</p>
+					<div class="skills">
+						<div class="skill-tag">Machine Learning</div>
+						<div class="skill-tag">Medical Imaging</div>
+						<div class="skill-tag">Signal Processing</div>
+						<div class="skill-tag">Computational Methods</div>
+						<div class="skill-tag">Inverse Problems</div>
+					</div>
+				</div>
+			</div>
+			<!-- Floating shapes for visual interest -->
+			<div class="floating-shapes">
+				<div class="shape shape-1" data-aos="zoom-in" data-aos-delay="200"></div>
+				<div class="shape shape-2" data-aos="zoom-in" data-aos-delay="300"></div>
+				<div class="shape shape-3" data-aos="zoom-in" data-aos-delay="400"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Research Section -->
+	<section id="research" class="research-section">
+		<div class="container">
+			<div class="section-title" data-aos="fade-up">
+				<h2 class="animated-underline">Research Focus</h2>
+			</div>
+			
+			<!-- Add typing text animation for research intro -->
+			<div class="research-intro" data-aos="fade-up" data-aos-delay="100">
+				<p class="typing-text">Exploring computational methods for medical imaging and ultrasound synthesis.</p>
+			</div>
+			
+			<div class="research-grid">
+				<div class="research-card" data-aos="flip-left" data-aos-delay="100">
+					<div class="card-inner">
+						<div class="card-front">
+							<h3>Inverse Learning Problems</h3>
+							<p>Developing mathematical models to solve inverse problems in medical imaging.</p>
+						</div>
+						<div class="card-back">
+							<h3>Key Focus Areas</h3>
+							<ul>
+								<li>Regularization techniques</li>
+								<li>Uncertainty quantification</li>
+								<li>Bayesian approaches</li>
+								<li>Deep learning integration</li>
 					</ul>
-				</section>
-			</section>
-		</footer>
+						</div>
+					</div>
+				</div>
+				<div class="research-card" data-aos="flip-left" data-aos-delay="200">
+					<div class="card-inner">
+						<div class="card-front">
+							<h3>Ultrasound Synthesis</h3>
+							<p>Creating novel methods for ultrasound image synthesis and enhancement.</p>
+						</div>
+						<div class="card-back">
+							<h3>Key Focus Areas</h3>
+							<ul>
+								<li>Generative models</li>
+								<li>Image-to-image translation</li>
+								<li>Speckle noise reduction</li>
+								<li>Resolution enhancement</li>
+					</ul>
+						</div>
+					</div>
+				</div>
+				<div class="research-card" data-aos="flip-left" data-aos-delay="300">
+					<div class="card-inner">
+						<div class="card-front">
+							<h3>Computational Methods</h3>
+							<p>Advancing algorithmic approaches for medical image analysis.</p>
+						</div>
+						<div class="card-back">
+							<h3>Key Focus Areas</h3>
+							<ul>
+								<li>Fast iterative methods</li>
+								<li>Sparse reconstruction</li>
+								<li>GPU-accelerated computing</li>
+								<li>Real-time processing</li>
+					</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul>
-				<li>&copy; Untitled</li>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
+			<!-- Featured Projects Section -->
+			<div class="section-title" data-aos="fade-up" style="margin-top: 60px;">
+				<h2 class="animated-underline">Featured Projects</h2>
+			</div>
+			
+			<div class="projects-grid">
+				<!-- PhyUSFormer Project -->
+				<div class="project-card" data-aos="fade-up" data-aos-delay="100">
+					<div class="project-header">
+						<h3>PhyUSFormer</h3>
+						<div class="project-links">
+							<a href="https://github.com/ghafoorharis/PhyUSFormer" target="_blank"><i class="fab fa-github"></i></a>
+							<a href="https://drive.google.com/file/d/14wmRiLn_evXww8nwXVM0w6WA1NeoMAmK/view" target="_blank"><i class="fas fa-file-alt"></i></a>
+						</div>
+					</div>
+					<p>Physics-Guided Ultrasound Segmentation Transformer that leverages a physics-guided simulation pipeline to generate synthetic datasets for foundation model pretraining.</p>
+					<div class="project-tech">
+						<span>Deep Learning</span>
+						<span>Physics-Based Modeling</span>
+						<span>Medical Imaging</span>
+					</div>
+					<div class="project-achievements">
+						<div class="achievement"><i class="fas fa-trophy"></i> 90.57% Dice on BUSI</div>
+						<div class="achievement"><i class="fas fa-trophy"></i> 89.82% Dice on UDIAT</div>
+					</div>
+				</div>
+				
+				<!-- GDSSA-Net Project -->
+				<div class="project-card" data-aos="fade-up" data-aos-delay="200">
+					<div class="project-header">
+						<h3>GDSSA-Net</h3>
+						<div class="project-links">
+							<a href="https://github.com/harisghafoor/GDSSA-Net" target="_blank"><i class="fab fa-github"></i></a>
+							<a href="https://www.sciencedirect.com/science/article/pii/S2542660525001118?dgcid=coauthor" target="_blank"><i class="fas fa-file-alt"></i></a>
+						</div>
+					</div>
+					<p>A gradually deeply supervised self-ensemble attention network for IoMT-integrated thyroid nodule segmentation in ultrasound images.</p>
+					<div class="project-tech">
+						<span>IoMT</span>
+						<span>Deep Supervision</span>
+						<span>Self-Ensemble</span>
+					</div>
+					<div class="project-achievements">
+						<div class="achievement"><i class="fas fa-trophy"></i> 79.85% Dice on DDTI</div>
+						<div class="achievement"><i class="fas fa-trophy"></i> 84.27% Dice on TN3K</div>
+					</div>
+				</div>
+				
+				<!-- UltraTransformer Project (replacing with LSTM-NBEATS) -->
+				<div class="project-card" data-aos="fade-up" data-aos-delay="300">
+					<div class="project-header">
+						<h3>Electricity Demand Forecasting with LSTM-NBEATS</h3>
+						<div class="project-links">
+							<a href="https://github.com/harisghafoor/LSTM-Encoded-Residual-Blocks-for-Interpretable-Time-Series-Forecasting" target="_blank"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+					<p>Development of a Network of Stacked Blocks of MLP in which each block is encoded by Recurrent Layer i.e. LSTM in order to accurately capture the different kinds of trends & seasonality in Time Series.</p>
+					<div class="project-tech">
+						<span>LSTM</span>
+						<span>Time Series Forecasting</span>
+						<span>Deep Learning</span>
+					</div>
+					<div class="project-achievements">
+						<div class="achievement"><i class="fas fa-trophy"></i> Enhanced pattern recognition</div>
+						<div class="achievement"><i class="fas fa-trophy"></i> Improved forecasting accuracy</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</section>
 
+	<!-- Publications Section -->
+	<section id="publications" class="publications-section">
+		<div class="container">
+			<div class="section-title" data-aos="fade-up">
+				<h2 class="animated-underline">Publications</h2>
+			</div>
+			<div class="publication-list">
+				<div class="publication-item" data-aos="fade-up" data-aos-delay="100">
+					<div class="publication-year">2023</div>
+					<div class="publication-content">
+						<h3 class="publication-title">GDSSA-Net: A gradually deeply supervised self-ensemble attention network for IoMT-integrated thyroid nodule segmentation</h3>
+						<p class="publication-authors">Muhammad Umar Farooq, Haris Ghafoor, Azka Rehman, Muhammad Usman, Dong-Kyu Chae</p>
+						<p class="publication-venue">Internet of Things</p>
+						<div class="publication-links">
+							<a href="https://github.com/harisghafoor/GDSSA-Net" class="publication-link" target="_blank">GitHub</a>
+							<a href="https://www.sciencedirect.com/science/article/pii/S2542660525001118?dgcid=coauthor" class="publication-link" target="_blank">Paper</a>
+						</div>
+						<p class="publication-abstract">The integration of deep learning techniques in the Internet of Medical Things (IoMT) has significantly advanced the early detection of life-threatening diseases such as thyroid cancer. Our model achieves a Dice coefficient of 79.85% and 84.27% on DDTI and TN3K datasets, respectively.</p>
+					</div>
+				</div>
+				<div class="publication-item" data-aos="fade-up" data-aos-delay="200">
+					<div class="publication-year">2024</div>
+					<div class="publication-content">
+						<h3 class="publication-title">PhyUSFormer: Physics-Guided Ultrasound Deep Learning Net for Image Segmentation</h3>
+						<p class="publication-authors">Haris Ghafoor, et al.</p>
+						<p class="publication-venue">Under Submission</p>
+						<div class="publication-links">
+							<a href="https://github.com/ghafoorharis/PhyUSFormer" class="publication-link" target="_blank">GitHub</a>
+							<a href="https://drive.google.com/file/d/14wmRiLn_evXww8nwXVM0w6WA1NeoMAmK/view" class="publication-link" target="_blank">Poster</a>
+						</div>
+						<p class="publication-abstract">A framework that leverages the physics of wave propagation in tissue to supervise the training of a deep learning model for robust ultrasound segmentation. Evaluations on public breast ultrasound datasets achieved significant improvements, with Dice scores of 90.57% on BUSI and 89.82% on UDIAT.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="floating-bubbles">
+			<!-- Generate 20 bubbles dynamically with JS -->
+		</div>
+			</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="contact-section">
+		<div class="container">
+			<div class="section-title" data-aos="fade-up">
+				<h2 class="animated-underline">Contact Me</h2>
+			</div>
+			<div class="contact-content">
+				<div class="contact-info" data-aos="fade-right">
+					<div class="contact-item">
+						<i class="fas fa-envelope"></i>
+						<div>
+					<h3>Email</h3>
+							<p>ghafoorharis@yonsei.ac.kr</p>
+						</div>
+					</div>
+					<div class="contact-item">
+						<i class="fas fa-map-marker-alt"></i>
+						<div>
+							<h3>Location</h3>
+							<p>Yonsei University, Seoul, South Korea</p>
+						</div>
+					</div>
+					<div class="social-icons">
+						<a href="https://github.com/harisghafoor" class="icon-3d" target="_blank"><i class="fab fa-github"></i></a>
+						<a href="https://linkedin.com/in/harisghafoor" class="icon-3d" target="_blank"><i class="fab fa-linkedin"></i></a>
+						<a href="https://twitter.com/harisghafoor_" class="icon-3d" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a href="https://scholar.google.com/citations?user=XPU6yOgAAAAJ&hl=en&oi=sra" class="icon-3d" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+					</div>
+				</div>
+				<div class="contact-form" data-aos="fade-left">
+					<form id="contactForm">
+						<div class="form-group">
+							<input type="text" id="name" class="form-control" required>
+							<label for="name">Your Name</label>
+						</div>
+						<div class="form-group">
+							<input type="email" id="email" class="form-control" required>
+							<label for="email">Your Email</label>
+						</div>
+						<div class="form-group">
+							<input type="text" id="subject" class="form-control" required>
+							<label for="subject">Subject</label>
+						</div>
+						<div class="form-group">
+							<textarea id="message" class="form-control" required></textarea>
+							<label for="message">Your Message</label>
+						</div>
+						<button type="submit" class="btn btn-primary shiny-btn">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wave-container">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path fill="#4361ee" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,128C672,128,768,160,864,176C960,192,1056,192,1152,170.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Back to top button -->
+	<div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+	<script src="assets/js/modern.js"></script>
+	
+	<!-- Immediate preloader fix -->
+	<script>
+		// Force preloader to disappear immediately
+		(function() {
+			var preloader = document.querySelector('.preloader');
+			if (preloader) {
+				preloader.style.opacity = '0';
+				setTimeout(function() {
+					preloader.style.display = 'none';
+				}, 500);
+			}
+			
+			// Initialize effects if they haven't been
+			if (typeof initAllEffects === 'function') {
+				setTimeout(function() {
+					initAllEffects();
+				}, 1000);
+			}
+		})();
+	</script>
 </body>
-
-</html>

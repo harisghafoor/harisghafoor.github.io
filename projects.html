@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Haris Ghafoor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/modern.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Haris<span>Ghafoor</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="research.html">Research</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="index.html#publications">Publications</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Technical Projects</h1>
+            <p>Showcasing my work in machine learning, signal processing, and computational methods</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-detailed">
+        <div class="container">
+            <div class="project-categories">
+                <button class="category-btn active" data-filter="all">All Projects</button>
+                <button class="category-btn" data-filter="machine-learning">Machine Learning</button>
+                <button class="category-btn" data-filter="time-series">Time Series</button>
+                <button class="category-btn" data-filter="signal-processing">Signal Processing</button>
+                <button class="category-btn" data-filter="medical-imaging">Medical Imaging</button>
+            </div>
+
+            <div class="projects-grid-detailed">
+                <!-- Project 1 -->
+                <div class="project-item" data-category="time-series machine-learning">
+                    <div class="project-image">
+                        <img src="images/nbeats.png" alt="LSTM Encoded NBEATS Model">
+                    </div>
+                    <div class="project-content">
+                        <h2>LSTM Encoded NBEATS Model for Electricity Demand Forecasting</h2>
+                        <div class="project-meta">
+                            <span class="project-date">2022</span>
+                            <div class="project-tags">
+                                <span>Deep Learning</span>
+                                <span>Time Series</span>
+                                <span>Forecasting</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Development of a Network of Stacked Blocks of MLP in which each block is encoded by Recurrent Layer i.e. LSTM in order to accurately capture the different kinds of trends & seasonality in Time Series.</p>
+                            
+                            <h3>Project Highlights</h3>
+                            <ul>
+                                <li>Integrated LSTM encoders into the NBEATS architecture to better capture temporal dependencies</li>
+                                <li>Improved forecasting accuracy compared to standard NBEATS implementations</li>
+                                <li>Successfully applied to electricity demand prediction with varying seasonality patterns</li>
+                                <li>Developed extensible framework for time series analysis that can incorporate various neural network architectures</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                                <span>Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisghafoor/TS_forcasting/tree/main" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item" data-category="machine-learning">
+                    <div class="project-image">
+                        <img src="images/dml.jpeg" alt="Decentralized Machine Learning">
+                    </div>
+                    <div class="project-content">
+                        <h2>Decentralized Machine Learning Infrastructure</h2>
+                        <div class="project-meta">
+                            <span class="project-date">2021-2022</span>
+                            <div class="project-tags">
+                                <span>Federated Learning</span>
+                                <span>Blockchain</span>
+                                <span>Distributed Systems</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Research & Development of a decentralized machine learning infrastructure that utilizes on-device machine learning, blockchain, and federated learning technologies to unlock the potential of unused data and idle processing power for machine learning tasks.</p>
+                            
+                            <h3>Project Highlights</h3>
+                            <ul>
+                                <li>Developed a blockchain-based system for secure model weight sharing and aggregation</li>
+                                <li>Implemented federated learning protocols to maintain data privacy while leveraging distributed data sources</li>
+                                <li>Created incentive mechanisms to encourage participation in the decentralized learning network</li>
+                                <li>Built a prototype system demonstrating the feasibility of privacy-preserving collaborative learning</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>TensorFlow Federated</span>
+                                <span>Ethereum</span>
+                                <span>Smart Contracts</span>
+                                <span>Distributed Computing</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisghafoor/Decentralized-Machine-Learning-" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item" data-category="time-series machine-learning">
+                    <div class="project-image">
+                        <img src="images/forecasting.jpg" alt="Time Series Forecasting">
+                    </div>
+                    <div class="project-content">
+                        <h2>Time Series Forecasting using Classical and Deep Learning Models</h2>
+                        <div class="project-meta">
+                            <span class="project-date">2021</span>
+                            <div class="project-tags">
+                                <span>Time Series</span>
+                                <span>ARIMA</span>
+                                <span>Deep Learning</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Explored classical and modern time series forecasting models, including ARIMA, SARIMA, linear regression, and deep learning models such as RNNs, N-BEATS, and transformer-based models. Global models such as NBEATS, RNN, etc outperform statistical methods due to their ability to provide robust forecasts.</p>
+                            
+                            <h3>Project Highlights</h3>
+                            <ul>
+                                <li>Comprehensive comparison of traditional statistical methods with modern deep learning approaches</li>
+                                <li>Implementation of various forecasting models from scratch</li>
+                                <li>Performance evaluation on multiple datasets with different characteristics</li>
+                                <li>Analysis of model strengths and weaknesses for different types of time series data</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Statsmodels</span>
+                                <span>TensorFlow</span>
+                                <span>Scikit-learn</span>
+                                <span>Plotly</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisghafoor/time_series_forecasting" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item" data-category="machine-learning">
+                    <div class="project-image">
+                        <img src="images/baesian.jpg" alt="Bayesian Statistics">
+                    </div>
+                    <div class="project-content">
+                        <h2>Driver Behavior Assessment Using Bayesian Statistics</h2>
+                        <div class="project-meta">
+                            <span class="project-date">2021</span>
+                            <div class="project-tags">
+                                <span>Bayesian Statistics</span>
+                                <span>Predictive Analytics</span>
+                                <span>Risk Assessment</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Developed an algorithm for assessing driver behavior and predicting accident probability in a Driver Behavior Assessment project using Applied Bayesian statistical methods. Created a driver report card system that provided an overall score based on various driving behaviors and characteristics.</p>
+                            
+                            <h3>Project Highlights</h3>
+                            <ul>
+                                <li>Implementation of Bayesian probabilistic models to estimate accident likelihood</li>
+                                <li>Feature engineering from driving behavior data to identify key risk factors</li>
+                                <li>Development of a scoring system for evaluating driver safety profiles</li>
+                                <li>Validation of model predictions against historical accident data</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>PyMC3</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                                <span>Seaborn</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisghafoor/Estimation-of-Probability-of-Accidents-Based-on-Driver-Habits" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-item" data-category="machine-learning">
+                    <div class="project-image">
+                        <img src="images/Churn.png" alt="Customer Churn">
+                    </div>
+                    <div class="project-content">
+                        <h2>Customer Churn Prediction and Analysis</h2>
+                        <div class="project-meta">
+                            <span class="project-date">2020</span>
+                            <div class="project-tags">
+                                <span>Machine Learning</span>
+                                <span>Classification</span>
+                                <span>Business Analytics</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Utilized Machine Learning models to predict customer churn and retention for a Telecom company, analyzing the results to optimize marketing and strategy policies.</p>
+                            
+                            <h3>Project Highlights</h3>
+                            <ul>
+                                <li>Data exploration and preprocessing of customer demographic and usage data</li>
+                                <li>Implementation of multiple classification algorithms to predict churn probability</li>
+                                <li>Feature importance analysis to identify key factors influencing customer decisions</li>
+                                <li>Development of actionable insights for customer retention strategies</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Scikit-learn</span>
+                                <span>XGBoost</span>
+                                <span>Pandas</span>
+                                <span>Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisghafoor/Customer_Churn" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-item" data-category="signal-processing">
+                    <div class="project-image">
+                        <img src="images/piano.jpg" alt="Piano Note Extraction">
+                    </div>
+                    <div class="project-content">
+                        <h2>Piano Note Extraction using Digital Signal Processing</h2>
+                        <div class="project-meta">
+                            <span class="project-date">2020</span>
+                            <div class="project-tags">
+                                <span>Signal Processing</span>
+                                <span>Audio Analysis</span>
+                                <span>Fourier Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Utilized various digital signal processing techniques, such as filtering, thresholding, and Fourier analysis, to extract the fundamental frequency and harmonics of each note played on the piano.</p>
+                            
+                            <h3>Project Highlights</h3>
+                            <ul>
+                                <li>Implementation of Fast Fourier Transform (FFT) for frequency domain analysis</li>
+                                <li>Development of algorithms for note onset detection in piano recordings</li>
+                                <li>Extraction of fundamental frequencies and harmonic content of piano notes</li>
+                                <li>Creation of a system for automatic transcription of piano performances</li>
+                            </ul>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>NumPy</span>
+                                <span>SciPy</span>
+                                <span>Librosa</span>
+                                <span>Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisghafoor/piano_note_extraction" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Haris<span>Ghafoor</span></h2>
+                    <p>Computational Science & Medical Imaging Researcher</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="research.html">Research</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="index.html#publications">Publications</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/harisghafoor" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/haris-ghafoor-804146180/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:harisghafoor2000@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Haris Ghafoor. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/modern.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Project filtering
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    categoryBtns.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter projects
+                    projectItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const categories = item.getAttribute('data-category').split(' ');
+                            if (categories.includes(filterValue)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

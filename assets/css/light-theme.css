@@ -1,0 +1,230 @@
+/* Light Theme Color Variables */
+:root {
+    --light-primary-color: #6c5ce7;
+    --light-secondary-color: #483d8b;
+    --light-accent-color: #a29bfe;
+    --light-dark-color: #f8f9fa;
+    --light-darker-color: #eaeaea;
+    --light-light-color: #ffffff;
+    --light-text-color: #212529;
+    --light-text-secondary: #495057;
+    --light-gray-color: #6c757d;
+    --light-light-gray: #e9ecef;
+    --light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles */
+body.light-theme {
+    color: var(--light-text-color) !important;
+    background-color: var(--light-dark-color) !important;
+}
+
+body.light-theme p {
+    color: var(--light-text-secondary) !important;
+}
+
+body.light-theme h1, 
+body.light-theme h2, 
+body.light-theme h3, 
+body.light-theme h4, 
+body.light-theme h5, 
+body.light-theme h6 {
+    color: var(--light-text-color) !important;
+}
+
+/* Particles background */
+body.light-theme #particles-js {
+    background-color: var(--light-dark-color) !important;
+}
+
+/* Navigation */
+body.light-theme .navbar {
+    background-color: rgba(248, 249, 250, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-theme .logo {
+    color: var(--light-text-color) !important;
+}
+
+body.light-theme .nav-links a {
+    color: var(--light-text-color) !important;
+}
+
+body.light-theme .bar {
+    background-color: var(--light-text-color) !important;
+}
+
+/* Section backgrounds */
+body.light-theme section {
+    background-color: var(--light-dark-color) !important;
+}
+
+body.light-theme .about-section, 
+body.light-theme .publications-section {
+    background: linear-gradient(to bottom, var(--light-dark-color), var(--light-darker-color)) !important;
+}
+
+body.light-theme .research-section {
+    background-color: var(--light-light-color) !important;
+}
+
+/* Cards and content boxes */
+body.light-theme .card-front, 
+body.light-theme .publication-item,
+body.light-theme .contact-form,
+body.light-theme .project-card {
+    background-color: var(--light-light-color) !important;
+    color: var(--light-text-color) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-theme .card-back {
+    background-color: var(--light-primary-color) !important;
+    color: white !important;
+}
+
+body.light-theme .publication-title {
+    color: var(--light-text-color) !important;
+}
+
+body.light-theme .publication-venue {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Form elements */
+body.light-theme .form-control {
+    background-color: var(--light-light-gray) !important;
+    color: var(--light-text-color) !important;
+    border: 1px solid var(--light-gray-color) !important;
+}
+
+body.light-theme .form-group label {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Button styles */
+body.light-theme .btn-primary {
+    background-color: var(--light-primary-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+body.light-theme .btn-primary:hover {
+    background-color: var(--light-secondary-color) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-theme .btn-outline {
+    background-color: transparent !important;
+    border: 1px solid var(--light-primary-color) !important;
+    color: var(--light-primary-color) !important;
+}
+
+body.light-theme .btn-outline:hover {
+    background-color: var(--light-primary-color) !important;
+    color: white !important;
+}
+
+/* Replace neon text with simple colored text */
+body.light-theme .neon-text {
+    color: var(--light-primary-color) !important;
+    font-weight: bold !important;
+}
+
+/* Hero section */
+body.light-theme .hero-bg {
+    background: linear-gradient(135deg, var(--light-darker-color) 0%, var(--light-dark-color) 50%, var(--light-light-color) 100%) !important;
+}
+
+/* Skill tags */
+body.light-theme .skill-tag {
+    background-color: var(--light-light-gray) !important;
+    color: var(--light-primary-color) !important;
+}
+
+/* Project cards */
+body.light-theme .project-tech span {
+    background-color: var(--light-light-gray) !important;
+    color: var(--light-primary-color) !important;
+}
+
+body.light-theme .achievement {
+    color: var(--light-text-secondary) !important;
+}
+
+body.light-theme .achievement i {
+    color: #ffd700 !important;
+}
+
+/* Social icons */
+body.light-theme .icon-3d {
+    background-color: var(--light-light-gray) !important;
+    color: var(--light-text-color) !important;
+}
+
+/* Publication abstract */
+body.light-theme .publication-abstract {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Theme switch positioning - overriding the default styling */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-icon {
+    margin-left: 10px;
+    color: var(--accent-color);
+} 

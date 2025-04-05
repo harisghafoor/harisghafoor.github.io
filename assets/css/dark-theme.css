@@ -1,0 +1,419 @@
+/* Dark Theme Color Variables */
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #483d8b;
+    --accent-color: #a29bfe;
+    --dark-color: #121212;
+    --darker-color: #0a0a0a;
+    --light-color: #1e1e1e;
+    --text-color: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --gray-color: #6c757d;
+    --light-gray: #2a2a2a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Base styles */
+body {
+    color: var(--text-color);
+    background-color: var(--dark-color);
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+/* Particles background */
+#particles-js {
+    background-color: var(--dark-color);
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: var(--text-color);
+}
+
+.nav-links a {
+    color: var(--text-color);
+}
+
+.bar {
+    background-color: var(--text-color);
+}
+
+/* Section backgrounds */
+section {
+    background-color: var(--dark-color);
+}
+
+.about-section, 
+.publications-section {
+    background: linear-gradient(to bottom, var(--dark-color), var(--darker-color));
+}
+
+.research-section {
+    background-color: var(--light-color);
+}
+
+/* Cards and content boxes */
+.card-front, 
+.publication-item,
+.contact-form {
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+.publication-title {
+    color: var(--text-color);
+}
+
+.publication-venue {
+    color: var(--text-secondary);
+}
+
+/* Form elements */
+.form-control {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    border: 1px solid var(--gray-color);
+}
+
+.form-group label {
+    color: var(--text-secondary);
+}
+
+/* Remove all text shadows and glow effects */
+.logo, .nav-links a, h1, h2, h3, h4, h5, h6, .btn, .text-glitch {
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/* Override any hover glows */
+.logo:hover, .nav-links a:hover, .btn:hover {
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/* Completely remove the glitch effect */
+.glitch-effect {
+    position: relative;
+    color: var(--text-color);
+    text-shadow: none;
+    animation: none;
+}
+
+.glitch-effect:hover {
+    text-shadow: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+    display: none;
+}
+
+/* Replace neon text with simple colored text */
+.neon-text {
+    color: var(--primary-color);
+    text-shadow: none;
+    animation: none;
+    font-weight: bold;
+}
+
+/* Remove all animation flickers */
+@keyframes flicker {
+    0%, 100% {
+        text-shadow: none;
+    }
+}
+
+/* Simpler button styles without glow */
+.btn {
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    box-shadow: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: none;
+}
+
+/* Remove gradient borders and replace with simple borders */
+.gradient-border:before {
+    display: none;
+}
+
+.gradient-border {
+    border: 1px solid var(--primary-color);
+}
+
+/* Remove electric borders */
+.electric-border::before {
+    display: none;
+}
+
+.electric-border {
+    border: 1px solid var(--primary-color);
+}
+
+/* Remove shine from shiny buttons */
+.shiny-btn::before {
+    display: none;
+}
+
+/* Clean preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: bounce 2s infinite ease-in-out;
+    box-shadow: none;
+}
+
+.double-bounce2 {
+    animation-delay: -1.0s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* Fix skill tags */
+.skill-tag {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+/* Social icons */
+.icon-3d {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .nav-links {
+        background-color: var(--dark-color);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Project cards styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-header h3 {
+    margin-bottom: 0;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.project-links a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--primary-color);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-tech span {
+    background-color: var(--darker-color);
+    color: var(--accent-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
+
+.project-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.achievement i {
+    color: #ffd700;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 1.2rem;
+    }
+}
+
+/* Add publication abstract styles */
+.publication-abstract {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Hero section modifications */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--darker-color) 0%, var(--dark-color) 50%, var(--light-color) 100%);
+    z-index: -1;
+}
+
+/* Also modify the VANTA effects to ensure they're not used */
+#vanta-net, .vanta-bg {
+    display: none;
+}
+
+/* Theme switch styling - move to corner */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+/* Make sure nav links have proper contrast in dark mode */
+.navbar {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+}
+
+.dark-theme .navbar {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+}
+
+.dark-theme .nav-links a {
+    color: var(--text-color) !important;
+    font-weight: 500;
+}
+
+.dark-theme .logo {
+    color: var(--text-color) !important;
+}
+
+.dark-theme .bar {
+    background-color: var(--text-color) !important;
+}
+
+/* Fix issue where theme doesn't apply properly */
+.dark-theme {
+    color: var(--text-color) !important;
+    background-color: var(--dark-color) !important;
+}
+
+.dark-theme p {
+    color: var(--text-secondary) !important;
+}
+
+.dark-theme section {
+    background-color: var(--dark-color) !important;
+}
+
+.dark-theme .hero-bg {
+    background: linear-gradient(135deg, var(--darker-color) 0%, var(--dark-color) 50%, var(--light-color) 100%) !important;
+} 
